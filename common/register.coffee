@@ -1,11 +1,14 @@
-Meteor.app.packages.register(
+ReactionCore.registerPackage
   name: "reaction-stripe"
   provides: ['paymentMethod']
   label: "Stripe"
   description: "Stripe Payment for Reaction Commerce"
   icon: "fa fa-globe"
   settingsRoute: "stripe"
+  defaultSettings:
+    api_key: ""
   hasWidget: false
+  autoEnable: false
   priority: "2"
   shopPermissions: [
     {
@@ -14,4 +17,3 @@ Meteor.app.packages.register(
       group: "Shop Settings"
     }
   ]
-)
